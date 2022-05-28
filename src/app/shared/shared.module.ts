@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from '@angular/material/toolbar'
+
+import { CommentsComponent } from './compoents/comments/comments.component';
+import { MaterialModule } from './material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    MatToolbarModule
-  ]
+  declarations: [CommentsComponent],
+  imports: [CommonModule, MaterialModule, ReactiveFormsModule],
+  exports: [CommentsComponent, MaterialModule, ReactiveFormsModule],
 })
-export class SharedModule { }
+export class SharedModule {}
